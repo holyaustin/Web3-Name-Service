@@ -23,7 +23,7 @@ then do the following
 
 
 ### **Questions?**
-Have some questions contact holyaustin on twitter @holyaustin
+Have some questions contact [holyaustin on twitter @holyaustin](https://www.twitter.com/holyaustin)
 
 ### Smart contract Addresses
 1. Polygon Mumbai: 0xae65F6e92c69dBE84B0884325596eCd4A54223BA
