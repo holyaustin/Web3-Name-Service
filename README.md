@@ -15,9 +15,9 @@ then do the following
 3. Start coding!
 
 ### Protocols used
-IPFS/Filecoin
-Opensea Marketplace
-Rarible Marketplace
+1. IPFS/Filecoin
+2. Opensea Marketplace
+3. Rarible Marketplace
 
 
 
@@ -25,11 +25,11 @@ Rarible Marketplace
 ### **Questions?**
 Have some questions contact holyaustin on twitter @holyaustin
 
-Smart contract Addresses
-Polygon Mumbai: 0xae65F6e92c69dBE84B0884325596eCd4A54223BA
-Hamony: 
-Celo:
-Metis:
-Skale: 
-Chainlink: 
+### Smart contract Addresses
+1. Polygon Mumbai: 0xae65F6e92c69dBE84B0884325596eCd4A54223BA
+2. Hamony: 
+3. Celo:
+4. Metis:
+5. Skale: 
+6. Chainlink: 
 
