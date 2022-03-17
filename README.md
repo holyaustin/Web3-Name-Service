@@ -27,9 +27,23 @@ Have some questions contact [holyaustin on twitter @holyaustin](https://www.twit
 
 ### Smart contract Addresses
 1. Polygon Mumbai: 0xae65F6e92c69dBE84B0884325596eCd4A54223BA
-2. Hamony: 
-3. Celo:
-4. Metis:
-5. Skale: 
-6. Chainlink: 
+2. Hamony: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
+3. Arbitrium: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
+4. Metis: 0x0b53D410113d7f9708A5dA4f80509aF9F5d3087e
 
+
+Smart contract Deployment
+npx hardhat run scripts/deploy.js --network mumbai
+0xae65F6e92c69dBE84B0884325596eCd4A54223BA
+
+
+npx hardhat run scripts/deploy.js --network arbitrium
+Contract deployed to: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
+
+
+npx hardhat run scripts/deploy.js --network metis
+Contract deployed to: 0x0b53D410113d7f9708A5dA4f80509aF9F5d3087e
+
+
+npx hardhat run scripts/deploy.js --network harmony
+Contract deployed to: 0xe078fe7A93017F8e18c1C52E79632d0B94c56c26
