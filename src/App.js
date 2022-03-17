@@ -354,6 +354,7 @@ useEffect(() => {
 							<p className="title">🐱‍👤 Web3 Name Service</p>
 							<p className="subtitle">Your immortal Web3 Name API on the blockchain!</p>
 						</div>
+
 						{/* Display a logo and wallet connection status*/}
 						<div className="right">
 							<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
@@ -361,7 +362,15 @@ useEffect(() => {
 						</div>
 					</header>
 				</div>
-				
+				<div>
+					<h1>
+						Get a .web3 domain name and tie it to youe social media profile
+					</h1>
+					<h2>
+						add your social media handle, wallet address, website or anything!
+					</h2>
+
+				</div>
 				{!currentAccount && renderNotConnectedContainer()}
 				{/* Render the input form if an account is connected */}
 				{currentAccount && renderInputForm()}

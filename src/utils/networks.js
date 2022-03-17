@@ -8,6 +8,9 @@ const networks = {
   "0x38": "BSC Mainnet",
   "0x89": "Polygon Mainnet",
   "0x13881": "Polygon Mumbai Testnet",
+  "0x421611": "Arbitrum Rinkeby",
+  "Ox588": "Metis",
+  "Ox1666700000ONE": "Harmony",
   "0xa86a": "AVAX Mainnet",
 }
 
