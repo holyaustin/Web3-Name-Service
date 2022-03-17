@@ -12,10 +12,10 @@ import { networks } from './utils/networks';
 // Constants
 const TWITTER_HANDLE = 'holyaustin';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const POLYGON_LINK = `https://polygon.technology/`;
+const BLOCKCHAIN_LINK = `https://www.metis.io/`;
 // Add the domain you will be minting
 const tld = '.web3';
-const CONTRACT_ADDRESS = '0xae65F6e92c69dBE84B0884325596eCd4A54223BA';
+const CONTRACT_ADDRESS = '0x0b53D410113d7f9708A5dA4f80509aF9F5d3087e';
 
 const App = () => {
 	// Create a stateful variable to store the network next to all the others
@@ -52,7 +52,7 @@ const App = () => {
 			// Try to switch to the Mumbai testnet
 			await window.ethereum.request({
 				method: 'wallet_switchEthereumChain',
-				params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
+				params: [{ chainId: '0x1666700000ONE' }], // Check networks.js for hexadecimal network ids
 			});
 		} catch (error) {
 			// This error code means that the chain we want has not been added to MetaMask
@@ -63,15 +63,15 @@ const App = () => {
 						method: 'wallet_addEthereumChain',
 						params: [
 							{	
-								chainId: '0x13881',
-								chainName: 'Polygon Mumbai Testnet',
-								rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+								chainId: 'Ox588',
+								chainName: 'Metis Stardust Testnet',
+								rpcUrls: ['https://stardust.metis.io/?owner=588'],
 								nativeCurrency: {
-										name: "Mumbai Matic",
-										symbol: "MATIC",
+										name: "Metis Stardust Testnet",
+										symbol: "METIS",
 										decimals: 18
 								},
-								blockExplorerUrls: ["https://mumbai.polygonscan.com/"]
+								blockExplorerUrls: ["https://stardust-explorer.metis.io/"]
 							},
 						],
 					});
@@ -144,13 +144,13 @@ const App = () => {
 	
 				// Check if the transaction was successfully completed
 				if (receipt.status === 1) {
-					console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
+					console.log("Domain minted! hhttps://stardust-explorer.metis.io/tx/"+tx.hash);
 					
 					// Set the record for the domain
 					tx = await contract.setRecord(domain, record);
 					//await tx.wait();
 	
-					console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
+					console.log("Record set! hhttps://stardust-explorer.metis.io/tx/"+tx.hash);
 				
 					
 				// Call fetchMints after 1 seconds
@@ -207,7 +207,7 @@ const fetchMints = async () => {
 
 // This will run any time currentAccount or network are changed
 useEffect(() => {
-	if (network === 'Polygon Mumbai Testnet') {
+	if (network === 'Metis Stardust Testnet') {
 		fetchMints();
 	}
 }, [currentAccount, network]);
@@ -225,7 +225,7 @@ useEffect(() => {
 	
 				let tx = await contract.setRecord(domain, record);
 				await tx.wait();
-				console.log("Record set https://mumbai.polygonscan.com/tx/"+tx.hash);
+				console.log("Record set https://stardust-explorer.metis.io/tx/"+tx.hash);
 	
 				fetchMints();
 				setRecord('');
@@ -289,11 +289,11 @@ useEffect(() => {
 	
 	// Form to enter domain name and data
 	const renderInputForm = () =>{
-	// If not on Polygon Mumbai Testnet, render the switch button
-	if (network !== 'Polygon Mumbai Testnet') {
+	// If not on Arbitrium Testnet, render the switch button
+	if (network !== 'Arbitrium Testnet') {
 		return (
 			<div className="connect-wallet-container">
-				<h2>Please switch to Polygon Mumbai Testnet</h2>
+				<h2>Please switch to Metis Testnet</h2>
 				{/* This button will call our switch network function */}
 				<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
 			</div>
@@ -357,7 +357,7 @@ useEffect(() => {
 
 						{/* Display a logo and wallet connection status*/}
 						<div className="right">
-							<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
+							<img alt="Network logo" className="logo" src={ network.includes("Arbitrium") ? polygonLogo : ethLogo} />
 							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
 						</div>
 					</header>
@@ -377,13 +377,13 @@ useEffect(() => {
 				{mints && renderMints()}
 				
 				<div className="footer-container">
-				<img alt="Polygon Logo" className="twitter-logo" src={polygonLogo} />
+				<img alt="Eth Logo" className="twitter-logo" src={ethLogo} />
 					<a
 						className="footer-text"
-						href={POLYGON_LINK}
+						href={BLOCKCHAIN_LINK }
 						target="_blank"
 						rel="noreferrer"
-					>{`Proudly deployed on Polygon`}</a>
+					>{`Proudly deployed on Metis`}</a>
 					<img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
 					<a
 						className="footer-text"
