@@ -364,7 +364,7 @@ useEffect(() => {
 				</div>
 				<div>
 					<h1>
-						Get a .web3 domain name and tie it to youe social media profile
+						Get a .web3 domain name and tie it to your social media profile
 					</h1>
 					<h2>
 						add your social media handle, wallet address, website or anything!
